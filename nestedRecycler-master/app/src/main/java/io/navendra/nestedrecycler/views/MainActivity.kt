@@ -8,6 +8,7 @@ import android.widget.LinearLayout
 import io.navendra.nestedrecycler.R
 import io.navendra.nestedrecycler.models.ParentDataFactory
 import io.navendra.nestedrecycler.views.adapters.ParentAdapter
+import io.navendra.nestedrecycler.views.adapters.java.ParentAdapterJava
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -25,7 +26,7 @@ class MainActivity : AppCompatActivity() {
 
         recyclerView.apply {
             layoutManager = LinearLayoutManager(this@MainActivity, LinearLayout.VERTICAL, false)
-            adapter = ParentAdapter(ParentDataFactory.getParents(40))
+            adapter = ParentAdapterJava(ParentDataFactory.getParents(40))
         }
 
     }
